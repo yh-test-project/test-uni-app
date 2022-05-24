@@ -5,7 +5,7 @@
         </view>
 
         <view class="line">
-            <text @click="goto('/pages/plugin-cloud/plugin-cloud', 'android')">测试：云端原生插件 Aq-ChooseFile</text>
+            <text @click="goto('/pages/plugin-cloud/plugin-cloud', 'Android')">测试：云端原生插件 Aq-ChooseFile</text>
         </view>
 	</view>
 </template>
@@ -22,7 +22,11 @@
 		},
 		methods: {
 			goto(url, platform="all") {
-                if (platform != 'all') {
+
+                // #ifdef APP-PLUS
+                let osName;
+                osName = plus.os.name;
+                if (osName && osName != platform) {
                     uni.showModal({
                         title: "此功能仅适用于" + platform,
                         showCancel: false,
@@ -30,6 +34,8 @@
                     });
                     return;
                 };
+                // #endif
+
 				uni.navigateTo({
 					url: url
 				});
