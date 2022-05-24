@@ -3,6 +3,10 @@
         <view class="line">
             <text @click="goto('/pages/plugin/plugin')">测试：本地原生插件 DCloud-RichAlert</text>
         </view>
+
+        <view class="line">
+            <text @click="goto('/pages/plugin-cloud/plugin-cloud', 'android')">测试：云端原生插件 Aq-ChooseFile</text>
+        </view>
 	</view>
 </template>
 
@@ -17,10 +21,18 @@
 
 		},
 		methods: {
-			goto(url) {
+			goto(url, platform="all") {
+                if (platform != 'all') {
+                    uni.showModal({
+                        title: "此功能仅适用于" + platform,
+                        showCancel: false,
+                        confirmText: '我知道了'
+                    });
+                    return;
+                };
 				uni.navigateTo({
 					url: url
-				})
+				});
 			}
 		}
 	}

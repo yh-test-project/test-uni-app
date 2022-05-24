@@ -133,6 +133,20 @@
                     "pid" : "",
                     "parameters" : {}
                 }
+            },
+            "Aq-ChooseFile" : {
+                "__plugin_info__" : {
+                    "name" : "文件选择，支持自定义路径，自定义筛选类型，多选",
+                    "description" : "支持android 11（30）文件选择，支持自定义路径",
+                    "platforms" : "Android",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=5263",
+                    "android_package_name" : "uni.UNIA66C636",
+                    "ios_bundle_id" : "uni.UNIA66C636",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "5263",
+                    "parameters" : {}
+                }
             }
         }
     },

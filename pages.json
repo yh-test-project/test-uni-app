@@ -18,6 +18,15 @@
                 "enablePullDownRefresh": false
             }
         }
+        ,{
+            "path" : "pages/plugin-cloud/plugin-cloud",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
     "globalStyle": {
         "navigationBarTextStyle": "black",
