@@ -1,8 +1,8 @@
 <template>
 	<view class="content">
-        <uni-list>
-            <uni-list-item @click="goto('/pages/plugin/plugin')" >测试：原生插件</uni-list-item>
-        </uni-list>
+        <view class="line">
+            <text @click="goto('/pages/plugin/plugin')">测试：本地原生插件 DCloud-RichAlert</text>
+        </view>
 	</view>
 </template>
 
@@ -10,7 +10,7 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello 2022'
+				title: 'Hello 2022 5051'
 			}
 		},
 		onLoad() {
@@ -34,12 +34,18 @@
 		justify-content: center;
 	}
 
-	uni-list > uni-list-item {
-        height: 100rpx;
+    .line {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: antiquewhite;
         width: 100%;
-        line-height: 100rpx;
-        display: block;
-        text-align: start;
-        border-bottom: 1px solid #000;
+        margin-top: 10rpx;
+    }
+	.line > text{
+        padding: 10rpx 30rpx;
+        height: 80rpx;
+        line-height: 80rpx;
+        font-size: 30rpx;
     }
 </style>

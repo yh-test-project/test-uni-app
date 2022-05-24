@@ -1,7 +1,7 @@
 {
     "name" : "uni-default",
     "appid" : "__UNI__A66C636",
-    "description" : "",
+    "description" : "uni-app测试项目",
     "versionName" : "1.0.1",
     "versionCode" : 101,
     "transformPx" : false,
