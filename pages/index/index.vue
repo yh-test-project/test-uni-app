@@ -7,6 +7,9 @@
         <view class="line">
             <text @click="goto('/pages/plugin-cloud/plugin-cloud', 'Android')">测试：云端原生插件 Aq-ChooseFile</text>
         </view>
+        <view class="line">
+             <text @click="goto('/pages/test/test')">测试：日志打印</text>
+        </view>
 	</view>
 </template>
 
@@ -26,7 +29,7 @@
                 // #ifdef APP-PLUS
                 let osName;
                 osName = plus.os.name;
-                if (osName && osName != platform) {
+                if (osName != platform && platform != 'all') {
                     uni.showModal({
                         title: "此功能仅适用于" + platform,
                         showCancel: false,
